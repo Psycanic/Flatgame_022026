@@ -5,8 +5,8 @@ public class GameEvents : Singleton<GameEvents>
 {
     public event Action<MilestoneDataSO> onMilestoneReached;
 
+    public event Action<float> OnMouseDrag;
     public event Action<float> OnMouseScroll;
-    public event Action OnMovingKeys;
 
 
     public void TriggerMilestone(MilestoneDataSO data) {
@@ -16,7 +16,12 @@ public class GameEvents : Singleton<GameEvents>
     public void callMouseScroll(float scrollDelta) { 
         OnMouseScroll?.Invoke(scrollDelta);
     }
-    
-    
+    public void callMouseDrag(float dragDelta)
+    {
+        OnMouseDrag?.Invoke(dragDelta);
+    }
+
+
+
 
 }
