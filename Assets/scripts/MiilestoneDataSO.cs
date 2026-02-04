@@ -7,7 +7,7 @@ public class MilestoneDataSO : ScriptableObject
     public VideoClip videoToPlay; 
     public AnimationClip animToPlay;
     [TextArea] public string[] subtitles;
-    public float cameraLockX; //locked camera when triggered
+    
 
 
 }

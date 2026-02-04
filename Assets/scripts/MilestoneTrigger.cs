@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class MilestoneTrigger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public MilestoneDataSO myData;
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        GameEvents.Instance.TriggerMilestone(myData);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

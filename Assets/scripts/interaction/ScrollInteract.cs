@@ -1,16 +1,16 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScrollInteract : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Update()
     {
-        
-    }
+        if (GameDirector.Instance.currentState != GameState.Intro) return; //scrolling only effective in intro state
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        float scrollDelta = Input.GetAxis("Mouse Scrollwheel");
+        if (scrollDelta != 0) { 
+            //gameevents broadcasts- mouse is scrolling
+            GameEvents.Instance.callMouseScroll(scrollDelta);
+        }
+    }   
 }

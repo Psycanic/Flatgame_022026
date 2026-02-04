@@ -12,7 +12,7 @@ public class GameDirector : Singleton<GameDirector>
 
     private void Start()
     {
-        GameEvents.Instance.onMilestoneReached += (data) => currentState = GameState.Exploring; 
+        GameEvents.Instance.onMilestoneReached += (data) => currentState = GameState.Intro; 
         
     }
 }
