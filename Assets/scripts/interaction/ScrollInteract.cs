@@ -11,6 +11,7 @@ public class ScrollInteract : MonoBehaviour
         if (scrollDelta != 0) { 
             //gameevents broadcasts- mouse is scrolling
             GameEvents.Instance.callMouseScroll(scrollDelta);
+            Debug.Log("mouse scrolling detected!");
         }
     }   
 }

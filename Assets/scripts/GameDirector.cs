@@ -18,6 +18,6 @@ public class GameDirector : Singleton<GameDirector>
     }
     private void Update()
     {
-        //Debug.Log("current game state:" + currentState);
+        Debug.Log("current game state:" + currentState);
     }
 }

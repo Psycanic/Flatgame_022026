@@ -10,10 +10,12 @@ public class GameEvents : Singleton<GameEvents>
 
 
     public void TriggerMilestone(MilestoneDataSO data) {
+        
         onMilestoneReached?.Invoke(data);
     }
 
-    public void callMouseScroll(float scrollDelta) { 
+    public void callMouseScroll(float scrollDelta) {
+        Debug.Log("mousescroll called!");
         OnMouseScroll?.Invoke(scrollDelta);
     }
     public void callMouseDrag(float dragDelta)
