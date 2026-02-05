@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ScrollResponder : MonoBehaviour
 {
-    private float scrollSpeedMultiplier;
+    //private float scrollSpeedMultiplier;
     public float smoothness = 5f;
     private float _targetX;
 

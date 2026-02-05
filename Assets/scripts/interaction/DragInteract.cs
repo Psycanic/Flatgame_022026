@@ -5,25 +5,16 @@ using UnityEngine.Rendering;
 public class DragInteract : MonoBehaviour
 {
 
-    private Vector2 lastMousePos = Input.mousePosition;
+    private Vector2 lastMousePos;
+
+    private void Start()
+    {
+        lastMousePos = Input.mousePosition;
+    }
 
     // Update is called once per frame
     private void Update()
     {
-        /*if (GameDirector.Instance.currentState != GameState.Exploring) return;
-
-        if (Input.GetMouseButtonDown(0)) {
-            Vector2 newMousePos = Input.mousePosition;
-            Vector2 MouseSpeed = (newMousePos - lastMousePos) / Time.deltaTime;
-            lastMousePos = newMousePos;
-
-
-            if (MouseSpeed !=)
-            {
-
-
-            }
-        }*/
 
         if (GameDirector.Instance.currentState != GameState.Exploring) return;
 
