@@ -8,11 +8,16 @@ public enum GameState
 }
 public class GameDirector : Singleton<GameDirector>
 {
-    public GameState currentState = GameState.Intro;
+    public GameState currentState;
 
     private void Start()
     {
+        currentState = GameState.Intro;
         GameEvents.Instance.onMilestoneReached += (data) => currentState = GameState.Intro; 
         
+    }
+    private void Update()
+    {
+        //Debug.Log("current game state:" + currentState);
     }
 }

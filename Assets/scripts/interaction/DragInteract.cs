@@ -20,6 +20,7 @@ public class DragInteract : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) { //right when pressing down
             lastMousePos = Input.mousePosition;
+            Debug.Log("lefy clicked");
         }
         if(Input.GetMouseButton(0)) {
             Vector2 newMousePos = Input.mousePosition;
@@ -28,7 +29,12 @@ public class DragInteract : MonoBehaviour
             if (Mathf.Abs(deltaX) > 0f) {
                 //broadcast the speedx
                 GameEvents.Instance.callMouseDrag(deltaX);
+
+
             }
+
+            //update old mouse pos
+            lastMousePos = newMousePos;
         }
     }
 }

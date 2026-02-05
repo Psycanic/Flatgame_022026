@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
-  - BackBackground
-  - Assets
-  - Middle ground
-  - Front
-  - Subwayback
-  - InsideSubway
-  - Other texts
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -40,6 +40,30 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackBackground
+    uniqueID: 4059712585
+    locked: 0
+  - name: background houses
+    uniqueID: 847087027
+    locked: 0
+  - name: Middleground
+    uniqueID: 31104187
+    locked: 0
+  - name: assets?
+    uniqueID: 1149370431
+    locked: 0
+  - name: foreground
+    uniqueID: 2997448197
+    locked: 0
+  - name: subway wall
+    uniqueID: 1585545445
+    locked: 0
+  - name: Inside Subway
+    uniqueID: 4063908339
+    locked: 0
+  - name: Other Texts
+    uniqueID: 450194529
     locked: 0
   m_RenderingLayers:
   - Default

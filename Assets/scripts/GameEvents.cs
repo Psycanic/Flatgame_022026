@@ -18,6 +18,7 @@ public class GameEvents : Singleton<GameEvents>
     }
     public void callMouseDrag(float dragDelta)
     {
+        Debug.Log("mousedrag called!");
         OnMouseDrag?.Invoke(dragDelta);
     }
 

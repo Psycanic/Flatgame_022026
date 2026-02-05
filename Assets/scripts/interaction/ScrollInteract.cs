@@ -7,7 +7,7 @@ public class ScrollInteract : MonoBehaviour
     {
         if (GameDirector.Instance.currentState != GameState.Intro) return; //scrolling only effective in intro state
 
-        float scrollDelta = Input.GetAxis("Mouse Scrollwheel");
+        float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
         if (scrollDelta != 0) { 
             //gameevents broadcasts- mouse is scrolling
             GameEvents.Instance.callMouseScroll(scrollDelta);

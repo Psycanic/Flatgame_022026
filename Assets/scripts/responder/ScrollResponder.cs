@@ -10,9 +10,17 @@ public class ScrollResponder : MonoBehaviour
     {
         _targetX = transform.position.x; // Í¬²½Î»ÖÃ
         //refresh targte only when things 'happens' ->in start
-        GameEvents.Instance.OnMouseScroll += (amount) => _targetX += amount;
+        GameEvents.Instance.OnMouseScroll += HandleScroll;
+    }
+    private void OnDestroy()
+    {
+        //GameEvents.Instance.OnMouseScroll -= (amount) => _targetX -= amount;
     }
 
+
+    private void HandleScroll(float move_amount) { 
+        
+    }
     void Update()
     {
         //only smoothing

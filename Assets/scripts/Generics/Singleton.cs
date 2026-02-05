@@ -8,38 +8,30 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         get
         {
             if (_instance == null)
-            {//if _instance not assigned, try find in the scene
-
+            {
                 _instance = FindFirstObjectByType<T>();
-                if (_instance == null)//if still no , make one
+                if (_instance == null)
                 {
-                    GameObject obj = new GameObject();
-                    obj.name = typeof(T).Name;
+                    GameObject obj = new GameObject(typeof(T).Name);
                     _instance = obj.AddComponent<T>();
                 }
             }
             return _instance;
-
         }
     }
 
     protected virtual void Awake()
     {
-        if (_instance != null)
+        if (_instance == null)
         {
-
             _instance = this as T;
-            DontDestroyOnLoad(gameObject);
-
+            // 如果你希望它跨场景存在，取消下面这行注释
+            // DontDestroyOnLoad(gameObject); 
         }
-        else
+        else if (_instance != this)
         {
-            Destroy(gameObject);// ensuring only one instance exists
+            Debug.LogWarning($"发现重复的单例 {typeof(T).Name}，已自动删除。");
+            Destroy(gameObject);
         }
-
     }
-
-    
-        
-
 }
