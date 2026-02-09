@@ -12,12 +12,16 @@ public class GameDirector : Singleton<GameDirector>
 
     private void Start()
     {
-        currentState = GameState.Intro;
-        GameEvents.Instance.onMilestoneReached += (data) => currentState = GameState.Intro; 
+        currentState = GameState.Exploring;
+        GameEvents.Instance.onMilestoneReached += (data) => currentState = GameState.Exploring; 
         
     }
     private void Update()
     {
         Debug.Log("current game state:" + currentState);
+    }
+
+    private void HandleMilestone() { 
+        
     }
 }
