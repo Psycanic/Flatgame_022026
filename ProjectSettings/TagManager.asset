@@ -53,6 +53,9 @@ TagManager:
   - name: assets?
     uniqueID: 1149370431
     locked: 0
+  - name: asset text layer
+    uniqueID: 694347249
+    locked: 0
   - name: foreground
     uniqueID: 2997448197
     locked: 0
