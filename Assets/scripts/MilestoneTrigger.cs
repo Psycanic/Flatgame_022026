@@ -9,7 +9,7 @@ public class MilestoneTrigger : MonoBehaviour
     {
         if (!_hasTriggered && collision.CompareTag("MainCamera"))
         {
-            if (myData = null)
+            if (myData == null)
             {
                 Debug.Log("no data is assigned");
                 return;
